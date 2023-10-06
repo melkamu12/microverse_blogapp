@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
   after_save :update_comment_counter
 
   def author=(user)
-    self.userId = user.id
+    self.user_id = user.id
   end
 
   def update_comment_counter
