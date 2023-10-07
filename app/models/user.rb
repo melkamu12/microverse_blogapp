@@ -1,9 +1,16 @@
 class User < ApplicationRecord
-  has_many :posts, foreign_key: 'AuthorId'
-  has_many :comments, foreign_key: 'comment_id'
-  has_many :likes, foreign_key: 'like_id'
+  has_one_attached :avatar do |attachable|
+    attachable.variant :thumb, resize_to_limit: [100, 100]
+  end
 
-  def recent_post
-    posts.order(created_at: :desc).limit(3)
+  validates :name, presence: true
+  validates :posts_counter, numericality: { greater_than_or_equal_to: 0 }
+
+  has_many :comments, foreign_key: 'user_id'
+  has_many :likes, foreign_key: 'user_id'
+  has_many :posts, foreign_key: 'author_id'
+
+  def recent_posts(limit = 3)
+    posts.order(created_at: :desc).limit(limit)
   end
 end

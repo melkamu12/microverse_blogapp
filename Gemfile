@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '3.2.2'
-
+gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
