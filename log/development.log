@@ -400,3 +400,84 @@ Processing by PostController#show as HTML
 Completed 200 OK in 174ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 2625)
 
 
+Started GET "/" for 127.0.0.1 at 2023-10-12 11:43:11 +0300
+Started GET "/" for 127.0.0.1 at 2023-10-12 11:43:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (50.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started GET "/" for 127.0.0.1 at 2023-10-12 11:44:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+Started GET "/" for 127.0.0.1 at 2023-10-12 11:45:34 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 897.5ms | Allocations: 34973)
+Completed 200 OK in 990ms (Views: 907.5ms | ActiveRecord: 0.0ms | Allocations: 36914)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-10-12 11:45:43 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 281.3ms | Allocations: 3450)
+Completed 200 OK in 287ms (Views: 284.3ms | ActiveRecord: 0.0ms | Allocations: 3716)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-10-12 11:45:47 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 2285)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 2609)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-10-12 11:45:52 +0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2201)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 2462)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-10-12 11:45:56 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 2182)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 2446)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-10-12 11:46:00 +0300
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2276)
+Completed 200 OK in 43ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 2745)
+
+
+Started GET "/users/1/posts/1" for 127.0.0.1 at 2023-10-12 11:46:05 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 2266)
+Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 2587)
+
+
