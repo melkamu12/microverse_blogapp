@@ -5,8 +5,19 @@ class Post < ApplicationRecord
 
   has_many :comments, foreign_key: 'post_id'
   has_many :likes, foreign_key: 'post_id'
+  belongs_to :author, class_name: 'User'
 
-  belongs_to :user, foreign_key: 'author_id', counter_cache: 'posts_counter'
+  after_save :update_postscounter_user
+  after_initialize :set_counters_tozero
+
+  def set_counters_tozero
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
+  end
+
+  def update_postscounter_user
+    author.update(posts_counter: author.posts.count)
+  end
 
   def recent_comments(num = 5)
     comments.order(created_at: :desc).limit(num)
