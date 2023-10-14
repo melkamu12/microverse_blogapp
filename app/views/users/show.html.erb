@@ -23,7 +23,7 @@
             </div>
         <%end%>
     </div>
-    
+    <%= link_to 'Create new post', new_user_post_path(@user)%>
     <a href = "<%=user_posts_path(@user)%>">
         <button class ="see-all-btn">See all posts</button>
     </a>
