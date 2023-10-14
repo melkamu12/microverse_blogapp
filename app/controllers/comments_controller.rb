@@ -1,20 +1,28 @@
 class CommentsController < ApplicationController
+  before_action :set_post
   def new
     @comment = Comment.new
   end
 
   def create
-    @user = current_user
-    @post = Post.find(params[:id])
-    @comment = @post.comments.build(comment_params.merge(user_id: @user))
+    @comment = Comment.new(comment_params)
+    @comment.post = @post
+    @comment.user = current_user
+
     if @comment.save
-      redirect_to @post
+      flash[:notice] = 'Comment was successfully created.'
+      redirect_to user_post_path(@comment.post.author_id, @comment.post.id)
     else
-      render 'new'
+      flash.now[:error] = 'Oops, something went wrong'
+      render :new
     end
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
 
   def comment_params
     params.require(:comment).permit(:text)

@@ -1,15 +1,12 @@
 class Comment < ApplicationRecord
-  belongs_to :author, class_name: 'User'
+  belongs_to :user, class_name: 'User'
   belongs_to :post, class_name: 'Post'
 
-  after_create :increment_postcomments_counter
-  after_destroy :decrement_postcomments_counter
+  after_save :update_comments_counter
 
-  def increment_postcomments_counter
-    post.increment!(:comments_count)
-  end
+  private
 
-  def decrement_postcomments_counter
-    post.decrement!(:comments_count)
+  def update_comments_counter
+    post.update(comments_counter: post.comments.count)
   end
 end
