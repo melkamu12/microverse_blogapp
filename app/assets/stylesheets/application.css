@@ -9,6 +9,15 @@
   margin: 0;
 }
 
+.container-page {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .container {
   margin-top: 50px;
   display: flex;
@@ -187,6 +196,13 @@
   width: 100%;
   flex-direction: column;
   margin: 45px 0;
+}
+
+.container-msg {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #2d8d1a;
 }
 
 @media (max-width: 768px) {

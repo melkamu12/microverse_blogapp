@@ -11,6 +11,13 @@
   </head>
 
   <body>
+  <div class="container-page">
+    <div class="continer-msg">
+      <% flash.each do |name,msg| %>
+        <%=msg%>
+      <%end%>
+    </div>
     <%= yield %>
-  </body>
+  </div> 
+</body>
 </html>
