@@ -14,9 +14,9 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 group :development, :test do
+  gem 'capybara'
   gem 'debug', platforms: %i[mri windows]
   gem 'rails-controller-testing'
-  gem 'capybara'
   gem 'webdrivers'
 end
 
