@@ -24,14 +24,14 @@ RSpec.describe 'User Show page Testing', type: :feature do
         text: 'Text post 2',
         comments_counter: 1,
         likes_counter: 5
-    ),
-    Post.create(
+      ),
+      Post.create(
         author: user,
         title: 'Post 3',
         text: 'Text post 3',
         comments_counter: 4,
         likes_counter: 7
-    )
+      )
     ]
     visit user_path(user)
   end
