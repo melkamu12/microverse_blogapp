@@ -100,6 +100,12 @@ it will install the required gemfile for running the project
 - Twitter: [@Melkamu_Almawu](https://twitter.com/Melkamu_Almawu)
 - LinkedIn: [melkamu-almawu](https://www.linkedin.com/in/melkamu-almawu/)
 
+👤 **Hafiz Massam Tabraiz Khan**
+
+- GitHub: [@githubhandle](https://github.com/HafizMassamTabraizKhan)
+- Twitter: [@twitterhandle](https://twitter.com/MassamTabraiz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hafiz-massam-tabraiz-khan-167644255/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
