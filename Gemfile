@@ -16,6 +16,8 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'rails-controller-testing'
+  gem 'capybara'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -24,6 +26,5 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
   gem 'selenium-webdriver'
 end
