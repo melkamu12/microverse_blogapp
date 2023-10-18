@@ -15,7 +15,7 @@
     <div class = "specific-user-posts">
         <%@user.recent_posts.each do |post|%>
             <div class = "user-post">
-                <a href = "<%=user_post_path(@user,post)%>" class = "all-comments-link">
+                <a href = "<%=user_post_path(@user,post)%>" class = "all-comments-link" id="user_post_<%= post.id %>">
                     <h3 class ="user-post-title"><%=post.title%></h3>
                 </a>
                 <p class ="user-post-text"><%=post.text%></p>
@@ -24,7 +24,7 @@
         <%end%>
     </div>
     <%= link_to 'Create new post', new_user_post_path(@user)%>
-    <a href = "<%=user_posts_path(@user)%>">
-        <button class ="see-all-btn">See all posts</button>
-    </a>
+    <div>
+        <%= link_to "See All Post", user_posts_path(user_id: @user.id), class: "see-all-btn" %>
+    </div>
 </div>
