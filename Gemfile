@@ -28,3 +28,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'selenium-webdriver'
 end
+
+gem 'devise', '>= 4.9.3'
