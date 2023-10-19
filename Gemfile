@@ -29,5 +29,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'devise', '>= 4.9.3'
 gem 'cancancan'
+gem 'devise', '>= 4.9.3'
