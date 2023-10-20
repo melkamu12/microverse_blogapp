@@ -1,7 +1,19 @@
 class CommentsController < ApplicationController
   before_action :set_post
+
   def new
     @comment = Comment.new
+  end
+
+  def destroy
+    @comment = @post.comments.find(params[:id])
+
+    if @comment.destroy
+      flash[:success] = 'Comment was successfully deleted'
+    else
+      flash[:error] = 'Oops! Cannot delete your comment.'
+    end
+    redirect_to user_post_path(@post.author_id, @post.id)
   end
 
   def create
