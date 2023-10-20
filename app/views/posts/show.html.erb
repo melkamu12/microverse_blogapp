@@ -8,6 +8,11 @@
         <div class = "post-comments-container">
             <%@post.comments.each do |comment|%>
                 <p><%=@user.name%>: <%=comment.text%></p>
+                <!--implmenting the comment delete button-->
+                <% if can? :destroy, comment %>
+                <%= button_to "Delete comment", user_post_comment_path(@user, @post, comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger pull-right' %>
+                <% end %>
+                <!--End--> 
             <%end%>
         </div>
     </div>
